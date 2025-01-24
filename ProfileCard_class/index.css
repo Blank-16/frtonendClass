@@ -1,0 +1,57 @@
+body {
+    background-color: aquamarine;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    color: red;
+    align-items: center;
+}
+
+.profile-card {
+    background-color: white;
+    border-radius: 15px;
+    width: 300px;
+}
+
+.profile-card .profile-img img{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 5px solid burlywood;
+}
+
+.profile-card .name {
+    color: black;
+    font-size: 2px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.profile-card .bio {
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.social-profile .profile-card {
+    margin-top: 60px;
+}
+
+.profile-card, .social-profile,  .btn, .view-profile{
+    text-decoration: none;
+    background-color: purple;
+    padding: 12px;;
+    color: white;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+    display: inline-block;
+}
+
+.btn:hover, .view-profile:hover {
+    background-color: bisque;
+}
+
+
