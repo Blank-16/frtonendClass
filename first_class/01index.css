@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*  types of selector :
+    1. universal selector; * 
+    2. element selector; tags
+    3. class selector;  .class
+    4. id selector; #id
+    5. attribute selector; [attribute]
+    6. pseudo class selector; :hover
+
+*/
+
+h1 {
+    color: grey;
+}
+
+#heading3
+{
+    color: red;
+}
+
+a,p {
+    color: lightgreen;
+}
+
+a:hover {
+    color: red;
+}
+
+input[type="text"] {
+    background-color: lightblue;
+    color:darkblue;
+    border: 1px solid black;
+}

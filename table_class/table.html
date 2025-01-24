@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tableContainer {
+            max-width: 500p;
+            background-color: aqua;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            thead {
+                background-color: yellow;
+                color: green;
+            }
+            th, td {
+                padding: 10px;
+                text-align: center;
+            }
+            tr:hover {
+                background-color: rgb(39, 255, 147);
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="tableContainer">
+        <table border="4">
+
+            <thead>
+                <tr> <!--tab, e row-->
+                    <th>S.no</th>
+                    <th>Product-Details</th>
+                    <th>Price($)</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Laptop</td>
+                    <td>3999</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mobile</td>
+                    <td>399</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Machine</td>
+                    <td>9998</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Laptop-2</td>
+                    <td>1499</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td>16995</td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+    </div>
+</body>
+
+</html>
