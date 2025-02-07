@@ -11,6 +11,10 @@
             color: rgb(19, 186, 19);
             text-decoration: none;
         }
+        #content {
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0);
+        }
+
     </style>
 </head>
 
@@ -30,15 +34,15 @@
             </div>
         </nav>
     </div>
-    <div class="bg-gray-200">
-        <div class="bg-gray-200 p-4 flex justify-between ">
-            <div class="bg-white rounded shadow-2xl w-1/2 p-4 mr-40">
+    <div class="bg-gray-200" id="main">
+        <div class="bg-gray-200 p-4 flex justify-between " id="content">
+            <div class="bg-white rounded  w-1/2 p-4 mr-40">
                 <h2 class="text-green-600 text-2xl">About CSS</h2>
                 <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a
                     document written in a markup language such as HTML. CSS is a cornerstone technology of the World
                     Wide Web, alongside HTML and JavaScript.</p>
             </div>
-            <div class="bg-white rounded shadow-2xl w-1/2 p-4 ml-40">
+            <div class="bg-white rounded w-1/2 p-4 ml-40" id="content">
                 <h2 class="text-green-600 text-2xl">Box Model</h2>
                 <p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins,
                     borders, padding, and the actual content. The image below illustrates the box model:</p>
@@ -46,7 +50,7 @@
 
 
         </div>
-        <div class="bg-white rounded shadow-2xl w-1/2 p-4 m">
+        <div class="bg-white rounded w-[782px] ml-[18px] p-4" id="content">
             <h2 class="text-green-600 text-2xl">Responsive Design</h2>
             <p>Responsive web design is an approach to web design that makes web pages render well on a variety of
                 devices and window or screen sizes. Recent work also considers the viewer proximity as part of the
@@ -55,18 +59,7 @@
         </div>
     </div>
     </div>
-    <!-- 
-        <div>
 
-            <div class="bg-white rounded shadow-2xl w-1/2 p-4">
-
-                <h2 class="text-green-600 text-2xl">Responsive Design</h2>
-                <p>Responsive web design is an approach to web design that makes web pages render well on a variety of
-                    devices and window or screen sizes. Recent work also considers the viewer proximity as part of the
-                    viewing context as an extension for RWD. Content, design, and performance are necessary across all
-                    devices to ensure usability and satisfaction.</p>
-
-            </div> -->
     </div>
     <div>
         <footer>
