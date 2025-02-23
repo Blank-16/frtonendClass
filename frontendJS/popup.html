@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp</title>
+</head>
+
+<body>
+    <h1>PopUp boxes in java</h1> <br>
+    <button onclick="showAlert()">Alert</button>
+    <button onclick="PromptName()">Name Prompt</button>
+    <button onclick="ConfirmAct()">Confirm Action</button>
+    <p id="output"></p>
+    <p id="output1"></p>
+    <script>
+        // alert prompt confirm 
+        function showAlert() {
+            alert("Welcome to JS");
+        }
+
+        function PromptName(){
+            let name = prompt("Enter your name");
+            if(name !== null && name !== "") {
+                document.getElementById("output").innerText = `Hello, ${name}`;
+            } else {
+                PromptName();
+            }
+        }
+        
+        function ConfirmAct() {
+            let response = confirm("Are you sure you want to process??");
+            if(response) {
+                document.getElementById("output").innerText = "You have confirmed the action";
+            } else {
+                document.getElementById("output").innerText = "You have cancelled the action";
+            }
+        }
+        
+        let name = "test";
+        document.getElementById("output").innerText = `${name}`;
+        let age = 24523;
+        document.getElementById("output1").innerText = `You are of the age :${age} years old`;
+
+    </script>
+</body>
+
+</html>
