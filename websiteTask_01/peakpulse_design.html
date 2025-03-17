@@ -1,69 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <title>Document</title>
 </head>
-<body class="font-sans">
 
-    <nav class="bg-blue-800 text-white py-3 px-20 flex justify-between items-center">
-        <div class="text-2xl font-bold">PeakPulse Fitness</div>
-        <div>
-            <a href="#" class="mr-4 hover:underline ">Home</a>
-            <a href="#" class="mr-4 hover:underline ">Services</a>
-            <a href="#" class="mr-4 hover:underline ">Pricing</a>
-            <a href="#" class="hover:underline">Contact</a>
+<body div class="bg-gray-100 flex justify-center items-center min-h-[100dvh] w-full ">
+
+    <div class="flex flex-col bg-white rounded-2xl shadow-lg w-1/5 h-fit space-y-4">
+
+        <div class="bg-blue-500 p-4 rounded-t-2xl">
+            <p class="text-white text-sm md:text-lg font-bold ">Smart Home Dashboard</p>
+            <p class="text-gray-800 text-xs md:text-sm font-medium">Temperature set to 64&deg;F</p>
         </div>
-    </nav>
 
-    <section class="bg-blue-200 py-20 px-6 text-center">
-        <h2 class="text-5xl font-bold text-blue-800 mb-4">Get Fit with PeakPulse Fitness</h2>
-        <p class="text-2xl text-blue-600 mb-8">Your journey to a stronger you starts here.</p>
-        <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-            Join Now
-        </button>
-    </section>
+        <div class="flex flex-col lg:flex-row justify-between bg-gray-200 p-4 m-1 mt-0 rounded-lg">
 
-    <section class="bg-white py-16 px-6 text-center">
-        <h2 class="text-4xl font-bold text-blue-800 mb-8">Membership Options</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            <div class="bg-blue-600 rounded-lg p-8 text-white shadow-md">
-                <h3 class="text-2xl font-bold mb-4">Basic</h3>
-                <p class="text-4xl font-bold mb-2">$20/month</p>
-                <ul class="list-disc ml-6">
-                    <li>Access to gym </li>
-                    <li>Limited group classes</li>
-                </ul>
+            <div class="">
+                <p class="text-black text-lg font-bold ">Living Room Lights</p>
+                <p class="text-gray-600 text-sm font-medium">Last Updated 2:48:35 pm </p>
             </div>
 
-            <div class="bg-blue-600 rounded-lg p-8 text-white shadow-md">
-                <h3 class="text-2xl font-bold mb-4">Pro</h3>
-                <p class="text-4xl font-bold mb-2">$35/month</p>
-                <ul class="list-disc ml-6">
-                    <li>Access to gym</li>
-                    <li>Unlimited group classes</li>
-                    <li>Personal training session (1/month)</li>
-                </ul>
+            <div class="flex justify-center mt-4 lg:mt-0 items-center">
+                <button class="rounded-full w-8 md:w-12 h-4 bg-[#f0ce36]">
+                    <div class="bg-white rounded-full w-4 h-4">
+                    </div>
+                </button>
             </div>
 
-            <div class="bg-blue-600 rounded-lg p-8 text-white shadow-md">
-                <h3 class="text-2xl font-bold mb-4">Elite</h3>
-                <p class="text-4xl font-bold mb-2">$50/month</p>
-                <ul class="list-disc ml-6">
-                    <li>Access to gym </li>
-                    <li>Unlimited group classes</li>
-                    <li>Personal training sessions (3/month)</li>
-                    <li>Sauna access</li>
-                </ul>
-            </div>
-       
         </div>
-    </section>
 
+        <div class="bg-gray-200 m-1 p-4 rounded-lg mt-3">
+            <div class="flex flex-col md:flex-row md:justify-between items-center">
+                <p class="font-bold">Temperature Control</p>
+                <p class="text-blue-400 font-bold text-lg">64&deg;F</p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-1 md:space-x-1">
+                <button
+                    class="bg-blue-300 py-1 px-2 w-20 md:w-40 rounded-2xl cursor-pointer hover:bg-blue-500 font-bold">+</button>
+                <button
+                    class="bg-blue-300 py-1 px-2 w-20 md:w-40 rounded-2xl cursor-pointer hover:bg-blue-500 font-bold">-</button>
+            </div>
+
+        </div>
+        <div
+            class="bg-gray-200 m-1 p-4 rounded-lg flex flex-col space-y-1 lg:space-x-1 lg:flex-row justify-between items-center">
+            <div class="">
+                <p class="font-bold text-gray-900">Front Door Locked</p>
+                <p>Last Activity: 2:48:35 pm</p>
+            </div>
+            <div class="w-20 lg:w-40 flex justify-center items-center mt-1 md:mt-0">
+                <button class="bg-green-400 rounded-lg p-2 flex justify-between ">
+                    <svg style="height: 25px; padding: 2px;" id="Layer_1" data-name="Layer 1"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.63 122.88">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #fbd734;
+                                }
+
+                                .cls-1,
+                                .cls-2 {
+                                    fill-rule: evenodd;
+                                }
+
+                                .cls-2 {
+                                    fill: #36464e;
+                                }
+                            </style>
+                        </defs>
+                        <title>padlock</title>
+                        <path class="cls-1"
+                            d="M6,47.51H87.64a6,6,0,0,1,6,6v63.38a6,6,0,0,1-6,6H6a6,6,0,0,1-6-6V53.5a6,6,0,0,1,6-6Z" />
+                        <path class="cls-2" d="M41.89,89.26l-6.47,16.95H58.21L52.21,89a11.79,11.79,0,1,0-10.32.24Z" />
+                        <path class="cls-2"
+                            d="M83.57,47.51H72.22V38.09a27.32,27.32,0,0,0-7.54-19,24.4,24.4,0,0,0-35.73,0,27.32,27.32,0,0,0-7.54,19v9.42H10.06V38.09A38.73,38.73,0,0,1,20.78,11.28a35.69,35.69,0,0,1,52.07,0A38.67,38.67,0,0,1,83.57,38.09v9.42Z" />
+                    </svg>
+                    <p class="text-white font-bold">Locked</p>
+                </button>
+            </div>
+        </div>
+    </div>
 
 </body>
-</html> 
- 
+
+</html>
