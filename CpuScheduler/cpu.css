@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.gantt-container {
+    margin-top: 30px;
+    height: 300px;
+}
+
+.stats-container {
+    margin-top: 30px;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+
+.tab.active {
+    background-color: white;
+    border-bottom: 1px solid white;
+}
+
+.tab-content {
+    display: none;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+
+.tab-content.active {
+    display: block;
+}

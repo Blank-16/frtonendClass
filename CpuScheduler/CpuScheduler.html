@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent CPU Scheduler Simulator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="cpu.css">
+</head>
+<body>
+    <h1>Intelligent CPU Scheduler Simulator</h1>
+    
+    <div class="form-group">
+        <label for="pid">Process ID:</label>
+        <input type="number" id="pid" min="1">
+    </div>
+    
+    <div class="form-group">
+        <label for="arrival">Arrival Time:</label>
+        <input type="number" id="arrival" min="0">
+    </div>
+    
+    <div class="form-group">
+        <label for="burst">Burst Time:</label>
+        <input type="number" id="burst" min="1">
+    </div>
+    
+    <div class="form-group">
+        <label for="priority">Priority (if applicable):</label>
+        <input type="number" id="priority" min="0" value="0">
+    </div>
+    
+    <button id="addProcess">Add Process</button>
+    
+    <h2>Process List</h2>
+    <table id="processTable">
+        <thead>
+            <tr>
+                <th>PID</th>
+                <th>Arrival Time</th>
+                <th>Burst Time</th>
+                <th>Priority</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    
+    <div class="form-group">
+        <label for="algorithm">Select Scheduling Algorithm:</label>
+        <select id="algorithm">
+            <option value="FCFS">FCFS</option>
+            <option value="SJF">SJF</option>
+            <option value="RoundRobin">Round Robin</option>
+            <option value="Priority">Priority Scheduling</option>
+        </select>
+    </div>
+    
+    <div class="form-group" id="timeQuantumGroup" style="display: none;">
+        <label for="timeQuantum">Time Quantum (for Round Robin):</label>
+        <input type="number" id="timeQuantum" min="1" value="1">
+    </div>
+    
+    <button id="runScheduler">Run Scheduler</button>
+    <button id="clearAll">Clear All</button>
+    
+    <div class="tabs">
+        <div class="tab active" data-tab="gantt">Gantt Chart</div>
+        <div class="tab" data-tab="stats">Statistics</div>
+    </div>
+    
+    <div id="ganttTab" class="tab-content active">
+        <div class="gantt-container">
+            <canvas id="ganttChart"></canvas>
+        </div>
+    </div>
+    
+    <div id="statsTab" class="tab-content">
+        <div class="stats-container">
+            <h2>Process Statistics</h2>
+            <table id="statsTable">
+                <thead>
+                    <tr>
+                        <th>PID</th>
+                        <th>Completion Time</th>
+                        <th>Turnaround Time</th>
+                        <th>Waiting Time</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            
+            <div style="margin-top: 20px;">
+                <h3>Average Statistics</h3>
+                <p id="avgStats"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="cpu.js"></script>
+</body>
+</html>
