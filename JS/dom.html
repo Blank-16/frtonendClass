@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Into To Dom</title>
+    <link rel="text" href="./images" type="text">
+</head>
+
+<body>
+    <h1 id="heading">Introduction to DOM in JavaScript</h1>
+    <button onclick="changeHeading()">Button</button>
+
+    <p id="changepara">This is paragraph</p>
+    <button onclick="changePara()">Para Button</button>
+
+    <img src="./images.jpg" alt="" id="img">
+    <button onclick="changeImg()">Image button</button>
+
+    <a href="https://javascript.info/intro" id="link">Link</a>
+    <button onclick="changeLink()">Link</button>
+
+    <ul id="list-items">
+    </ul>
+    <button onclick="addItem()">List item add</button>
+    <button onclick="removeItem()">Remove item From List</button>
+
+    <p id="date">Date is </p>
+    <button onclick="dateTime()">Date</button>
+
+    <script>
+        // Scripts for DOM html page
+        function changeHeading() {
+            let heading = document.getElementById("heading");
+            heading.innerHTML = "The changed Heaidng";
+            heading.style.color = "red";
+        }
+        function changePara() {
+            const para = document.getElementById("changepara");
+            para.innerHTML = 'This is changed paragraph';
+        }
+        function changeImg() {
+            const img = document.getElementById("img")
+            img.src = "9.jpg"
+        }
+        function changeLink() {
+            const link = document.getElementById("link")
+            link.href = "https://www.connectd.com/"
+            link.innerHTML = 'Changed link'
+        }
+        // Add items in a unorderedlist
+        function addItem() {
+            const ul = document.getElementById("list-items")
+            const newItem = document.createElement("li")
+            newItem.innerText = "New Item " + (ul.children.length + 1)
+            ul.appendChild(newItem)
+        }
+        //remove item from unorderedList
+        function removeItem() {
+            const ul = document.getElementById("list-items")
+            if (ul.children.length > 0) {
+                ul.removeChild(ul.lastElementChild);
+            } else {
+                alert("There is no child li to remove")
+            }
+        }
+
+        function dateTime() {
+            const datetime = document.getElementById("date")
+            datetime.innerHTML = `The date is ${Date()}`
+            datetime.style.fontSize = "18px"
+        }
+    </script>
+</body>
+
+</html>
