@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+    <form action="" class="bg-white p-6 rounded-2xl shadow-md w-96">
+        <h1 class="text-2xl font-bold mb-3">Form Validation</h1>
+        <p>Username:</p>
+        <input type="text" name="username" id="username" class="border border-gray-100 p-2 w-full my-4 rounded-lg"
+            placeholder="Enter your username">
+
+        <p>Email:</p>
+
+        <input type="email" name="email" id="email" class="border border-gray-100 p-2 w-full my-4 rounded-lg"
+            placeholder="Enter your email">
+        <p>Password:</p>
+        <input type="password" name="password" id="password" class="border border-gray-100 p-2 w-full my-4 rounded-lg"
+            placeholder="Enter your password">
+
+        <button type="submit" class="bg-blue-500 text-white p-2 rounded-lg w-full">Submit</button>
+    </form>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (username.trim() === '') {
+                alert('Username is required');
+                return;
+            }
+
+            if (email.trim() === '') {
+                alert('Email is required');
+                return;
+            }
+
+            if (!email.includes('@')) {
+                alert('Valid email is required');
+                return;
+            }
+
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long');
+                return;
+            }
+
+            alert('Form submitted successfully!');
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>

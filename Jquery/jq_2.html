@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+        #slide {
+            background-color: lightsalmon;
+            padding: 20px;
+            border: 2px solid greenyellow;
+
+        }
+
+        #panel {
+            background-color: lightcoral;
+            padding: 20px;
+            border: 2px solid greenyellow;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Example of jquery</h1>
+    <div id="slide">Slide toggle up/Down</div>
+    <div id="panel">Panel</div>
+
+    <!-- On click mouse events -->
+    <button id="click">Click me</button>
+    <button id="dbclick">db click</button>
+    <p id="output"></p>
+
+    <div id="hover"
+        style="height: 200px; width: 200px; background-color: lightseagreen; display: flex; justify-content:center; align-items:center;">
+        Hover over me</div>
+    <br>
+    Name: <input type="text" id="name" placeholder="Enter your name">
+    <button id="show">Display Name</button>
+
+
+    <script>
+
+        // we write it like this to load the script before the document is loaded
+        $(document).ready(function () {
+
+            $('#name').text(function () {
+                return $(this).val();
+            })
+            $('#show').click(function () {
+                const name = $('#name').val();
+                alert("Hello " + name);
+            })
+
+
+            $('#hover').hover(function () {
+                $(this).css("background-color", "lightblue");
+            }, function () {
+                $(this).css("background-color", "lightseagreen");
+            })
+
+
+
+            $("#click").on('click', function () {
+                $('#output').text("You clicked me");
+            })
+
+            $("#dbclick").on('dblclick', function () {
+                $('#output').text("You double clicked me");
+            })
+
+        })
+
+
+        $('#slide').click(function () {
+            $('#panel').slideToggle(1000)
+        })
+    </script>
+
+
+
+</body>
+
+</html>
