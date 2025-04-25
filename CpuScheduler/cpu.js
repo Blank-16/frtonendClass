@@ -1,4 +1,3 @@
-
 class Process {
     constructor(pid, arrival, burst, priority = 0) {
         this.pid = pid;
@@ -41,6 +40,15 @@ algorithmSelect.addEventListener('change', toggleTimeQuantum);
 runSchedulerBtn.addEventListener('click', runScheduler);
 clearAllBtn.addEventListener('click', clearAll);
 
+// Add after the existing event listeners
+priorityInput.addEventListener('input', function () {
+    const value = parseInt(this.value);
+    if (value > 20) {
+        alert('Priority cannot exceed 20!');
+        this.value = '20';
+    }
+});
+
 // Tab functionality
 document.querySelectorAll('.tab').forEach(tab => {
     tab.addEventListener('click', () => {
@@ -68,6 +76,12 @@ function addProcess() {
     // Check if PID already exists
     if (processes.some(p => p.pid === pid)) {
         alert('Process ID must be unique!');
+        return;
+    }
+
+    // Check if priority is within valid range
+    if (priority > 20) {
+        alert('Priority cannot exceed 20!');
         return;
     }
 
@@ -231,6 +245,13 @@ function roundRobinScheduling(inputProcesses, timeQuantum) {
 function priorityScheduling(inputProcesses) {
     // Create deep copy of processes to avoid modifying originals
     const processes = JSON.parse(JSON.stringify(inputProcesses));
+
+    // Validate priorities
+    processes.forEach(process => {
+        if (process.priority > 20) {
+            process.priority = 20;
+        }
+    });
 
     // Lower priority number = higher priority
     processes.sort((a, b) => {

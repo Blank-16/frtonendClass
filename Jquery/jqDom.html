@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+</head>
+
+<body id="body">
+
+    <h1>DOM manipulation in jquery</h1>
+    <p id="para">This is a paragraph.</p>
+    <button id="btnPara">Change para</button>
+
+    <div id="box">This is a demo</div>
+    <button id="btncss">Change Style</button>
+
+    <br>
+    <a href="www.google.com" id="link">Visit Link</a>
+    <button id="btnlink">Change link`</button>
+
+    <div id="show"></div>
+
+    <script>
+        $(document).ready(function () {
+
+            // json object 
+            const student = {
+                name: 'blank',
+                age: 21,
+                subject: 'js, golang, cpp',
+            }
+
+            $('#btnlink').click(function () {
+                $("#link").attr("href", "https://www.youtube.com/")
+                    .text("GO to youtube")
+            })
+
+            $('#btncss').click(function () {
+                $('#box').css({
+                    'background-color': '#0d1017',
+                    'width': '200px',
+                    'color': 'cyan',
+                    'font-size': '20px',
+                    'border': '2px solid yellowgreen'
+                });
+            })
+
+
+            $('#btnPara').click(function () {
+                $('#para').text("THIS IS A NEW paragraph");
+                $('#body').css({
+                    'background-color': 'black',
+                    'color': 'white',
+                })
+                const stuData = `
+                    <h1>Name: ${student.name}</h1>
+                    <p>Age : ${student.age}</p>
+                    <p>Subject : ${student.subject}</p>
+                `
+                $('#show').html(stuData);
+                $('#show').css({
+                    'background-color': 'black',
+                    'color': 'white',
+                    'border': '2px solid yellowgreen',
+                    'width': '200px',
+                    'padding': '10px'
+                })
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>
